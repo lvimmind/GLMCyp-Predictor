@@ -1,0 +1,75 @@
+﻿Name,SMILES,BoM,Reference,Enzyme
+Estrone,C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CCC4=C3C=CC(=C4)O,"<19,H;><17,H;><8,H;><13,H;><9,H;>",P450Rdb Dataset,CYP1A1
+Estrone,C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CCC4=C3C=CC(=C4)O,"<19,H;><17,H;>",P450Rdb Dataset,CYP1B1
+Estrone,C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CCC4=C3C=CC(=C4)O,"<19,H;><17,H;>",P450Rdb Dataset,CYP3A5
+Estrone,C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CCC4=C3C=CC(=C4)O,"<19,H;><17,H;><9,H;>",P450Rdb Dataset,CYP3A7
+"(5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoate",CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)O,"<2,H;><3,4;>",P450Rdb Dataset,CYP1A1
+"(5Z,8Z,11Z,14Z,17Z)-Eicosapentaenoate",CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)O,"<3,4;>",P450Rdb Dataset,CYP2J2
+"(5Z,8Z,11Z,14Z)-Eicosatetraenoate",CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)[O-],"<9,10;><12,13;><6,7;>",P450Rdb Dataset,CYP1B1
+"(5Z,8Z,11Z,14Z)-Eicosatetraenoate",CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)[O-],"<9,10;><12,13;><6,7;>",P450Rdb Dataset,CYP2J2
+"(5Z,8Z,11Z,14Z)-Eicosatetraenoate",CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)[O-],"<2,H;><3,H;><9,10;><12,13;><6,7;><5,H;><4,H;>",P450Rdb Dataset,CYP1A1
+"(12S)-Hydroperoxy-(5Z,8Z,10E,14Z)-Eicosatetraenoate",CCCCC/C=C\C[C@@H](/C=C/C=C\C/C=C\CCCC(=O)[O-])OO,"<23,24; ><9,23;>",P450Rdb Dataset,CYP1A1
+"(12S)-Hydroperoxy-(5Z,8Z,10E,14Z)-Eicosatetraenoate",CCCCC/C=C\C[C@@H](/C=C/C=C\C/C=C\CCCC(=O)[O-])OO,"<23,24; ><9,23;>",P450Rdb Dataset,CYP1B1
+17Beta-Estradiol,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=C3C=CC(=C4)O,"<8,H;><13,H;><19,H;><12,H;><17,H;><11,H;>",P450Rdb Dataset,CYP1A1
+17Beta-Estradiol,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=C3C=CC(=C4)O,"<19,H;><17,H;>",P450Rdb Dataset,CYP1B1
+17Beta-Estradiol,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=C3C=CC(=C4)O,"<19,H;><17,H;>",P450Rdb Dataset,CYP3A7
+17Beta-Estradiol,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=C3C=CC(=C4)O,"<19,H;><17,H;>",P450Rdb Dataset,CYP3A5
+All-Trans-Retinal,CC1=C(C(CCC1)(C)C)/C=C/C(=C/C=C/C(=C/C=O)/C)/C,"<18,H;>",P450Rdb Dataset,CYP1A1
+All-Trans-Retinal,CC1=C(C(CCC1)(C)C)/C=C/C(=C/C=C/C(=C/C=O)/C)/C,"<18,H;>",P450Rdb Dataset,CYP1B1
+All-Trans-Retinol,CC1=C(C(CCC1)(C)C)/C=C/C(=C/C=C/C(=C/CO)/C)/C,"<18,19;>",P450Rdb Dataset,CYP1A1
+All-Trans-Retinol,CC1=C(C(CCC1)(C)C)/C=C/C(=C/C=C/C(=C/CO)/C)/C,"<18,19;>",P450Rdb Dataset,CYP1B1
+All-Trans-Retinol,CC1=C(C(CCC1)(C)C)/C=C/C(=C/C=C/C(=C/CO)/C)/C,"<18,19;>",P450Rdb Dataset,CYP3A5
+"(4Z,7Z,10Z,13Z,16Z,19Z)-Docosahexaenoate",CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCC(=O)[O-],"<3,4;>",P450Rdb Dataset,CYP1A1
+"(4Z,7Z,10Z,13Z,16Z,19Z)-Docosahexaenoate",CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCC(=O)[O-],"<3,4;>",P450Rdb Dataset,CYP2J2
+"(5S)-Hydroperoxy-(6E,8Z,11Z,14Z)-Eicosatetraenoate",CCCCC/C=C\C/C=C\C/C=C\C=C\[C@H](CCCC(=O)[O-])OO,"<23,24;><16,23;>",P450Rdb Dataset,CYP1A1
+"(5S)-Hydroperoxy-(6E,8Z,11Z,14Z)-Eicosatetraenoate",CCCCC/C=C\C/C=C\C/C=C\C=C\[C@H](CCCC(=O)[O-])OO,"<23,24;><16,23;>",P450Rdb Dataset,CYP1B1
+"(13S)-Hydroperoxy-(9Z,11E)-Octadecadienoate",CCCCC[C@@H](/C=C/C=C\CCCCCCCC(=O)[O-])OO,"<6,21;><21,22;>",P450Rdb Dataset,CYP1A1
+"(13S)-Hydroperoxy-(9Z,11E)-Octadecadienoate",CCCCC[C@@H](/C=C/C=C\CCCCCCCC(=O)[O-])OO,"<6,21;><21,22;>",P450Rdb Dataset,CYP1B1
+"(15S)-Hydroperoxy-(5Z,8Z,11Z,13E)-Eicosatetraenoate",CCCCC[C@@H](/C=C/C=C\C/C=C\C/C=C\CCCC(=O)[O-])OO,"<6,23;><23,24;>",P450Rdb Dataset,CYP1A1
+"(15S)-Hydroperoxy-(5Z,8Z,11Z,13E)-Eicosatetraenoate",CCCCC[C@@H](/C=C/C=C\C/C=C\C/C=C\CCCC(=O)[O-])OO,"<7,8;><23,24;><7,H;><8,H;>",P450Rdb Dataset,CYP2J2
+"(5Z,8Z,11Z)-Eicosatrienoate",CCCCCCCC/C=C\C/C=C\C/C=C\CCCC(=O)O,"<2,H;>",P450Rdb Dataset,CYP1A1
+Arachidonic Acid,CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)O,"<2,H;><1,H;><3,H;>",P450Rdb Dataset,CYP1A1
+N-Pentyl-9-acridinamine,N=1C=2C=CC=CC2C(NCCCCC)=C3C=CC=CC13,"<9,10;Cleavage;R1> <10,H;Oxidation;R1>","Mayer, Richard T.; et al. Drug Metabolism and Disposition (2007), 35(1), 103-109",CYP1A1
+TMOPBS,O=C1N(C2=CC=C(C=C2)S(=O)(=O)OC=3C=C(OC)C(OC)=C(OC)C3)CCN1CCCC,"<28,29;Cleavage;R1> <29,H;Oxidation;R1>","Zarifi Khosroshahi, Mitra; et al. Journal of Pharmacy and Pharmacology (2020), 72(2), 249-258",CYP1A1
+DMOPBS,O=C1N(C2=CC=C(C=C2)S(=O)(=O)OC=3C=C(OC)C=C(OC)C3)CCN1CCCC,"<26,27;Cleavage;R1> <27,H;Oxidation;R1>","Zarifi Khosroshahi, Mitra; et al. Journal of Pharmacy and Pharmacology (2020), 72(2), 249-258",CYP1A1
+DBOPBS,O=C1N(C2=CC=C(C=C2)S(=O)(=O)OC=3C=C(Br)C=C(Br)C3)CCN1CCCC,"<24,25;Cleavage;R1> <25,H;Oxidation;R1>","Zarifi Khosroshahi, Mitra; et al. Journal of Pharmacy and Pharmacology (2020), 72(2), 249-258",CYP1A1
+CEPO,O=C1C=CC2=NC=3C=CC(OCCCl)=CC3OC2=C1,"<11,12;Cleavage;R1> <12,H;Oxidation;R1>","Jin, Qiang; et al. Chinese Chemical Letters (2020), 31(11), 2945-2949",CYP1A1
+ICT-2803,O=C(C1=CC=2C=C(OC)C=CC2N1)N3C=4C=CC=5C=CC=CC5C4C(CCl)C3,"<17,H;Hydroxylation;R1>","Sheldrake, Helen M.; et al. Journal of Medicinal Chemistry (2013), 56(15), 6273-6277",CYP1A1
+Crysin,O=C1C=C(OC=2C=C(O)C=C(O)C12)C=3C=CC=CC3,"<10,H;Hydroxylation;R1>","Williams, Ibidapo S.; et al. Journal of Agricultural and Food Chemistry (2017), 65(34), 7440-7446",CYP1A1
+"3,4-Benzopyrene",C=1C=CC2=C(C1)C=C3C=CC4=CC=CC=5C=CC2=C3C45,"<1,6;Epoxidation;R1>","Hajiahmadi, Zahra; et al. Polycyclic Aromatic Compounds (2021), 41(3), 593-603",CYP1A1
+"3,4-Benzopyrene",C=1C=CC2=C(C1)C=C3C=CC4=CC=CC=5C=CC2=C3C45,"<1,6;Epoxidation;R1>","Hajiahmadi, Zahra; et al. Polycyclic Aromatic Compounds (2021), 41(3), 593-603",CYP1B1
+7-Ethoxyresorufin,O=C1C=CC2=NC=3C=CC(OCC)=CC3OC2=C1,"<11,12;Cleavage;R1> <12,H;Oxidation;R1>","Mayer, Richard T.; et al. Drug Metabolism and Disposition (2007), 35(1), 103-109",CYP1A1
+"(-)-trans-7,8-Dihydrobenzo[a]pyrene-7,8-diol",OC1C=CC2=C3C=CC4=CC=CC5=CC=C(C=C2C1O)C3=C54,"<3,4;Epoxidation;R1>","Hajiahmadi, Zahra; et al. Polycyclic Aromatic Compounds (2021), 41(3), 593-603",CYP1A1
+"(-)-trans-7,8-Dihydrobenzo[a]pyrene-7,8-diol",OC1C=CC2=C3C=CC4=CC=CC5=CC=C(C=C2C1O)C3=C54,"<3,4;Epoxidation;R1>","Hajiahmadi, Zahra; et al. Polycyclic Aromatic Compounds (2021), 41(3), 593-603",CYP1B1
+"1,2-Benzopyrone",O=C1OC=2C=CC=CC2C=C1,"<10,11;Epoxidation;R1>","Zhao, Mengjing; et al. British Journal of Pharmacology (2019), 176(24), 4639-4652",CYP1A1
+"3,6-Dimethylimidazo[4,5-g]quinoxalin-2-amine",N1=CC(=NC2=CC3=C(N=C(N)N3C)C=C12)C,"<11,H;Hydroxylation;R1>","Turesky, Robert J.; et al. Chemical Research in Toxicology (2012), 25(2), 410-421",CYP1A1
+Testosterone,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=CC(=O)CC[C@]34C,"<13,H;>",P450Rdb Dataset,CYP1B1
+Testosterone,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=CC(=O)CC[C@]34C,"<13,H;>",P450Rdb Dataset,CYP3A5
+Testosterone,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@@H]2O)CCC4=CC(=O)CC[C@]34C,"<13,H;>",P450Rdb Dataset,CYP3A7
+Progesterone,CC(=O)[C@H]1CC[C@@H]2[C@@]1(CC[C@H]3[C@H]2CCC4=CC(=O)CC[C@]34C)C,"<5,H;><14,H;>",P450Rdb Dataset,CYP1B1
+Progesterone,CC(=O)[C@H]1CC[C@@H]2[C@@]1(CC[C@H]3[C@H]2CCC4=CC(=O)CC[C@]34C)C,"<14,H;>",P450Rdb Dataset,CYP3A5
+Albendazole,CCCSC1=CC2=C(C=C1)N=C(N2)NC(=O)OC,"<4,S;><1,H;>",P450Rdb Dataset,CYP2J2
+Fenbendazole,COC(=O)NC1=NC2=C(N1)C=C(C=C2)SC3=CC=CC=C3,"<15,S;>",P450Rdb Dataset,CYP2J2
+Danazol,C#CC1(O)CCC2C3CCC4=CC=5ON=CC5CC4(C)C3CCC21C,"<14,15;>",Drug Metabolism And Dsposition. 2010,CYP2J2
+Amiodarone,O=C(C1=CC(I)=C(OCCN(CC)CC)C(I)=C1)C=2C=3C=CC=CC3OC2CCCC,"<11,12;Cleavage;R1> <12,H;Oxidation;R1><11,14;Cleavage;R2> <14,H;Oxidation;R2>",Drug Metabolism And Dsposition. 2010,CYP2J2
+Albendazole-1,O=C(OC)NC1=NC=2C=C(SCCC)C=CC2N1,"<11,S;S-oxidation;R1>",Drug Metabolism And Dsposition. 2010,CYP2J2
+Mesoridazine,O=S(C1=CC=C2SC=3C=CC=CC3N(C2=C1)CCC4N(C)CCCC4)C,"<2,S;S-oxidation;R1>",Drug Metabolism And Dsposition. 2010,CYP2J2
+Thioridazine,S1C=2C=CC=CC2N(C3=CC(SC)=CC=C13)CCC4N(C)CCCC4,"<1,S;S-oxidation;R1><12,S;S-oxidation;R2>",Drug Metabolism And Dsposition. 2010,CYP2J2
+Tamoxifen,O(C1=CC=C(C=C1)C(C=2C=CC=CC2)=C(C=3C=CC=CC3)CC)CCN(C)C,"<26,27;Cleavage;R1> <27,H;Oxidation;R1><26,28;Cleavage;R2> <28,H;Oxidation;R2>",Drug Metabolism And Dsposition. 2010,CYP2J2
+Cyclosporine,O=C1NC(C(=O)N(C)C(C(=O)N(C)C(C(=O)N(C)C(C(=O)N(C)C(C(=O)NC(C(=O)N(C)CC(=O)N(C)C(C(=O)NC(C(=O)N(C)C(C(=O)NC1C)CC(C)C)C(C)C)CC(C)C)CC)C(O)C(C)CC=CC)C(C)C)CC(C)C)CC(C)C)C,"<82,H;Hydroxylation;R1>",Drug Metabolism And Dsposition. 2010,CYP2J2
+4-[4-(Hydroxydiphenylmethyl)-1-piperidinyl]-1-(4-methylphenyl)-1-butanone,O=C(C1=CC=C(C=C1)C)CCCN2CCC(CC2)C(O)(C=3C=CC=CC3)C=4C=CC=CC4,"<9,H;Hydroxylation;R1>","Lafite, Pierre; et al. Biochemistry (2007), 46(36), 10237-10247",CYP2J2
+Terfenadinone,O=C(C1=CC=C(C=C1)C(C)(C)C)CCCN2CCC(CC2)C(O)(C=3C=CC=CC3)C=4C=CC=CC4,"<10,H;Hydroxylation;R1><11,H;Hydroxylation;R2><12,H;Hydroxylation;R3>","Lafite, Pierre; et al. Biochemistry (2007), 46(36), 10237-10247",CYP2J2
+1-(4-Ethylphenyl)-4-[4-(hydroxydiphenylmethyl)-1-piperidinyl]-1-butanone,O=C(C1=CC=C(C=C1)CC)CCCN2CCC(CC2)C(O)(C=3C=CC=CC3)C=4C=CC=CC4,"<10,H;Hydroxylation;R1><9,H;Hydroxylation;R2>","Lafite, Pierre; et al. Biochemistry (2007), 46(36), 10237-10247",CYP2J2
+4-[4-(Hydroxydiphenylmethyl)-1-piperidinyl]-1-(4-propylphenyl)-1-butanone,O=C(C1=CC=C(C=C1)CCC)CCCN2CCC(CC2)C(O)(C=3C=CC=CC3)C=4C=CC=CC4,"<10,H;Hydroxylation;R1><9,H;Hydroxylation;R2><11,H;Hydroxylation;R3>","Lafite, Pierre; et al. Biochemistry (2007), 46(36), 10237-10247",CYP2J2
+4-[4-(Hydroxydiphenylmethyl)-1-piperidinyl]-1-[4-(2-propen-1-yl)phenyl]-1-butanone,O=C(C1=CC=C(C=C1)CC=C)CCCN2CCC(CC2)C(O)(C=3C=CC=CC3)C=4C=CC=CC4,"<9,H;Hydroxylation;R1><10,11;Epoxidation;R2>","Lafite, Pierre; et al. Biochemistry (2007), 46(36), 10237-10247",CYP2J2
+"a,a-Diphenyl-1-[4-(4-propylphenyl)butyl]-4-piperidinemethanol",OC(C=1C=CC=CC1)(C=2C=CC=CC2)C3CCN(CCCCC4=CC=C(C=C4)CCC)CC3,"<30,H;Hydroxylation;R1><31,H;Hydroxylation;R2>","Lafite, Pierre; et al. Biochemistry (2007), 46(36), 10237-10247",CYP2J2
+"Androst-4-Ene-3,17-Dione",C[C@]12CCC(=O)C=C1CC[C@@H]3[C@@H]2CC[C@]4([C@H]3CCC4=O)C,"<9,H;>",P450Rdb Dataset,CYP3A5
+All-Trans-Retinoate,CC1=C(C(CCC1)(C)C)/C=C/C(=C/C=C/C(=C/C(=O)[O-])/C)/C,"<7,H;>",P450Rdb Dataset,CYP3A5
+All-Trans-Retinoate,CC1=C(C(CCC1)(C)C)/C=C/C(=C/C=C/C(=C/C(=O)[O-])/C)/C,"<7,H;><1,H;>",P450Rdb Dataset,CYP3A7
+Paramorphine,O(C1=CC=C2C3=C1OC4C(OC)=CC=C5C(N(C)CCC354)C2)C,"<17,18;Cleavage;R1> <18,H;Oxidation;R1><11,12;Cleavage;R2> <12,H;Oxidation;R2>","Kramlinger, Valerie M.; et al. Journal of Biological Chemistry (2015), 290(33), 20200-20210",CYP3A5
+Adalat,O=C(OC)C1=C(NC(=C(C(=O)OC)C1C=2C=CC=CC2N(=O)=O)C)C,"<7,H;Oxidation;R1><14,H;Oxidation;R1>","Neunzig, Ina; et al. Applied Biochemistry and Biotechnology (2012), 168(4), 785-796",CYP3A5
+(+)-Testosterone,O=C1C=C2CCC3C(CCC4(C)C(O)CCC34)C2(C)CC1,"<5,H;Hydroxylation;R1>","Neunzig, Ina; et al. Applied Biochemistry and Biotechnology (2012), 168(4), 785-796",CYP3A5
+3Beta-Sulfooxy-Androst-5-En-17-One,C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CC=C4[C@@]3(CC[C@@H](C4)OS(=O)(=O)[O-])C,"<9,H;>",P450Rdb Dataset,CYP3A7
+Dehydroepiandrosterone,C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2=O)CC=C4[C@@]3(CC[C@@H](C4)O)C,"<9,H;>",P450Rdb Dataset,CYP3A7
+Dazolam,FC=1C=CC=CC1C2=NCC3=CN=C(N3C=4C=CC(Cl)=CC24)C,"<23,H;Hydroxylation;R1>","Neunzig, Ina; et al. Applied Biochemistry and Biotechnology (2012), 168(4), 785-796",CYP3A7
+Luciferin 6′-pentafluorobenzyl ether,O=C(O)C1N=C(SC1)C2=NC=3C=CC(OCC=4C(F)=C(F)C(F)=C(F)C4F)=CC3S2,"<15,16;Cleavage;R1> <16,H;Oxidation;R1>","Neunzig, Ina; et al. Applied Biochemistry and Biotechnology (2012), 168(4), 785-796",CYP3A7

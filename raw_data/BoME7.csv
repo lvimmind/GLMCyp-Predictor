@@ -1,0 +1,69 @@
+﻿Name,SMILES,BoM,Reference,Enzyme
+Benzeneacetic acid,O=C(OCCCCOP(=O)(OCC)OCC)C(C1=CC=C(C=C1)CC(C)C)C,"<24,H;Hydroxylation;R1>","Xie, Gang; et al, British Journal of Pharmacology (2012), 167(1), 222-232",CYP1A2
+Propanamide,O=C(NCCC1C=2C(=CC=C3OCCC32)CC1)CC,"<18,H;Hydroxylation;R1>","Obach, R. Scott; et al, Drug Metabolism & Disposition (2016), 44(5), 634-646",CYP1A2
+L294,O=C(NN=CC=1SC=CC1)C2=CC=C3OCOC3=C2,"<16,H;Oxidation;R1><15,16;Cleavage;R1><16,17;Cleavage;R1>","Fraga, Aline Guerra M.; et al, European Journal of Medicinal Chemistry (2010), 46(1), 349-355",CYP1A2
+Acetamide,O=C(NC1=CC=C(OCC)C=C1)C,"<9,H;Oxidation;R1><8,9;Cleavage;R1>","Guedes, Jessica de Siqueira; et al, ACS Omega (2022), 7(43), 38752-38765",CYP1A2
+MeiQx,N1=CC(=NC2=C1C=CC3=C2N=C(N)N3C)C,"<16,H;Hydroxylation;R1>","Turesky, Robert J.; et al Chemical Research in Toxicology (2012), 25(2), 410-421",CYP1A2
+Methanesulfonamide,O=S(=O)(NC1=CC=C(N)C=C1OC=2C=CC=CC2)C,"<4,H;Hydroxylation;R1><9,H;Hydroxylation;R1>","Li, Fengping; et al, Chemical Research in Toxicology (2009), 22(1), 72-80",CYP1A2
+DIQA,N1=CC(=NC2=CC3=C(N=C(N)N3C)C=C12)C,"<11,H;Hydroxylation;R1>","Turesky, Robert J.; et al Chemical Research in Toxicology (2012), 25(2), 410-421",CYP1A2
+Pentoxifylline,O=C1C2=C(N=CN2C)N(C(=O)N1CCCCC(=O)C)C,"<13,H;Oxidation;R1><12,13;Cleavage;R1>",SOMP. Bioinformatics. 2015,CYP1A2
+Irbesartan,O=C1N(C(=NC12CCCC2)CCCC)CC=3C=CC(=CC3)C=4C=CC=CC4C5=NN=NN5,"<11,H;Hydroxylation;R1><13,H;Hydroxylation;R2><8,H;Hydroxylation;R3><9,H;Hydroxylation;R4>",SOMP. Bioinformatics. 2015,CYP1A2
+Formaldehyde,O=C,"<2,H;Hydroxylation;R1>","Chowdhury, Goutam; et al, Journal of Biological Chemistry (2010), 285(11), 8031-8044",CYP2A6
+Nicotine,N=1C=CC=C(C1)C2N(C)CCC2,"<9,H;Hydroxylation;R1>","Miyazawa, Mitsuo; et al, Chemical & Pharmaceutical Bulletin (2011), 59(3), 295-297",CYP2A6
+Ethanamine,O=NN(CC)CC,"<6,H;Oxidation;R1><3,6;Cleavage;R1><4,H;Oxidation;R2><3,4;Cleavage;R2>","Chowdhury, Goutam; et al, Journal of Biological Chemistry (2010), 285(11), 8031-8044",CYP2A6
+(-)-Camphor,O=C1CC2CCC1(C)C2(C)C,"<10,H;Hydroxylation;R1><11,H;Hydroxylation;R1><4,H;Hydroxylation;R1>","Chowdhury, Goutam; et al, Journal of Biological Chemistry (2010), 285(11), 8031-8045",CYP2A6
+Benzoxazin-1,O=C1OC(C#CCCC)(C2=CC(Cl)=CC=C2N1)C(F)(F)F,"<15,H;Hydroxylation;R1>","Cox, Philip M.; et al, ACS Medicinal Chemistry Letters (2014), 5(10), 1156-1161",CYP2B6
+Buproban,O=C(C=1C=CC=C(Cl)C1)C(NC(C)(C)C)C,"<6,H;Hydroxylation;R1>","Chai, Yuan-Yuan; et al, Current Drug Metabolism (2022), 23(13), 1054-1066",CYP2B6
+Benzeneethanamine,C=1C=CC(=CC1)CC(NCC)C=2C=CC=CC2,"<10,H;Oxidation;R1><9,10;Cleavage;R1>","Wink, Carina S. D.; et al, Toxicology Letters (2015), 238(3), 39-44",CYP2B6
+Lephetamine,C=1C=CC(=CC1)CC(C=2C=CC=CC2)N(C)C,"<17,H;Oxidation;R1><15,17;Cleavage;R1><16,H;Oxidation;R2><15,16;Cleavage;R2>","Wink, Carina S. D.; et al, Toxicology Letters (2015), 238(3), 39-44",CYP2B6
+Dibenzoxepin-11,O=C1C2=CC=C(C=C2OCC=3C=CC=CC13)NC4=CC=C(F)C=C4F,"<21,22;Cleavage;R1>","Storch, K.; et al, MedChemComm (2014), 5(6), 808-815",CYP2B6
+DEBM,O=C(C1=CC(Br)=C(O)C(Br)=C1)C=2C=3C=CC(O)=CC3OC2CC,"<15,H;Hydroxylation;R1>","McDonald, Matthew G.; et al, Chemical Research in Toxicology (2007), 20(12), 1833-1842",CYP2C9
+Warfarin,O=C1OC=2C=CC=CC2C(O)=C1C(C=3C=CC=CC3)CC(=O)C,"<6,H;Hydroxylation;R1>","Kuzikov, Alexey V.; et al, Journal of Electroanalytical Chemistry (2022), 904, 115937",CYP2C9
+Benzenesulfonamide-1,[N-]=[N+]=NCCCNC(=O)NS(=O)(=O)C1=CC=C(C=C1)C,"<20,H;Hydroxylation;R1>","Anderson, Lyndsey L.; et al, Analytical Chemistry (Washington, DC, United States) (2016), 88(17), 8604-8609",CYP2C9
+Benzenesulfonamide-2,O=S(=O)(NC=1N=C(N=C(OCCO)C1OC=2C=CC=CC2O)C3=NC=CC=N3)C4=CC=C(C=C4)C(C)(C)C,"<36,H;Hydroxylation;R1><37,H;Hydroxylation;R1><38,H;Hydroxylation;R1>",SOMP. Bioinformatics. 2015,CYP2C9
+Procainamide,O=C(NCCN(CC)CC)C1=CC=C(N)C=C1,"<15,H;Hydroxylation;R1>",SOMP. Bioinformatics. 2015,CYP2C9
+Bepridil,O(CC(N1CCCC1)CN(C=2C=CC=CC2)CC=3C=CC=CC3)CC(C)C,"<6,H;Hydroxylation;R1><7,H;Hydroxylation;R2><26,H;Hydroxylation;R3><27,H;Hydroxylation;R4><21,H;Hydroxylation;R5>",SOMP. Bioinformatics. 2015,CYP2C9
+Irbesartan,O=C1N(C(=NC12CCCC2)CCCC)CC=3C=CC(=CC3)C=4C=CC=CC4C5=NN=NN5,"<11,H;Hydroxylation;R1><13,H;Hydroxylation;R2><8,H;Hydroxylation;R3><9,H;Hydroxylation;R4><25,H;Hydroxylation;R5>",SOMP. Bioinformatics. 2015,CYP2C9
+Tasosartan,O=C1N(C2=NC(=NC(=C2CC1)C)C)CC=3C=CC(=CC3)C=4C=CC=CC4C5=NN=NN5,"<10,H;Hydroxylation;R1>",SOMP. Bioinformatics. 2015,CYP2C9
+Lansoprazole sulfide,FC(F)(F)COC=1C=CN=C(C1C)CSC2=NC=3C=CC=CC3N2,"<20,H;Hydroxylation;R1><21,H;Hydroxylation;R1>","Beebe, Jenny; et al, Journal of Medicinal Chemistry (2022), 65(20), 13681-13691",CYP2C19
+Nelfinavir,O=C(NC(CSC=1C=CC=CC1)C(O)CN2CC3CCCCC3CC2C(=O)NC(C)(C)C)C=4C=CC=C(O)C4C,"<30,H;Hydroxylation;R1><31,H;Hydroxylation;R1><32,H;Hydroxylation;R1>","Burk, Oliver; et al, Molecular Pharmacology (2021), 99(3), 184-196",CYP2C19
+Methanesulfonamide,O=S(=O)(NC1=CC=C(N)C=C1OC=2C=CC=CC2)C,"<4,H;Hydroxylation;R1><9,H;Hydroxylation;R1>","Li, Fengping; et al, Chemical Research in Toxicology (2009), 22(1), 72-80",CYP2C19
+Ceprandal,O=S(C1=NC=2C=CC(OC)=CC2N1)CC3=NC=C(C(OC)=C3C)C,"<24,H;Hydroxylation;R1>","Chai, Yuan-Yuan; et al, Current Drug Metabolism (2022), 23(13), 1054-1066",CYP2C19
+Buflomedil,O=C(C=1C(OC)=CC(OC)=CC1OC)CCCN2CCCC2,"<10,H;Oxidation;R1><9,10;Cleavage;R1>",SOMP. Bioinformatics. 2015,CYP2C19
+Bepridil,O(CC(N1CCCC1)CN(C=2C=CC=CC2)CC=3C=CC=CC3)CC(C)C,"<6,H;Hydroxylation;R1><7,H;Hydroxylation;R2><26,H;Hydroxylation;R3><27,H;Hydroxylation;R4><21,H;Hydroxylation;R5>",SOMP. Bioinformatics. 2015,CYP2C19
+Risperdine,O=C1C(=C(N=C2N1CCCC2)C)CCN3CCC(C4=NOC=5C=C(F)C=CC54)CC3,"<11,H;Hydroxylation;R1>","Obach, R. Scott; et al, Drug Metabolism & Disposition (2016), 44(5), 634-646",CYP2D6
+Benzeneacetic acid,O=C(OCCCCOP(=O)(OCC)OCC)C(C1=CC=C(C=C1)CC(C)C)C,"<26,H;Hydroxylation;R1><27,H;Hydroxylation;R1>","Xie, Gang; et al, British Journal of Pharmacology (2012), 167(1), 222-232",CYP2D6
+Dimephenopan,C=1C=CC(=CC1)CC(N(C)C)C,"<11,H;Hydroxylation;R1><10,H;Hydroxylation;R1>","Lee, Sangkyu; et al, Archives of Pharmacal Research (2013), 36(11), 1385-1391",CYP2D6
+IEM-2129,N=1C=2C=CC=CC2C(NC)=C3C=CC=CC13,"<10,H;Oxidation;R1><9,10;Cleavage;R1>","Mayer, Richard T.; et al, Drug Metabolism and Disposition (2007), 35(1), 103-109",CYP2D6
+Demethyltamoxifen,O(C1=CC=C(C=C1)C(C=2C=CC=CC2)=C(C=3C=CC=CC3)CC)CCNC,"<12,H;Hydroxylation;R1>","Concert Pharmaceuticals, Inc. World Intellectual Property Organization, WO2009035652 A1 2009-03-19",CYP2D6
+CMTPP,O=C1C(=C(N=C2N1CCCC2)C)CCCl,"<11,H;Hydroxylation;R1>","Teva Pharmaceutical Industries Ltd.; Teva Pharmaceuticals USA, Inc. World Intellectual Property Organization, WO2008144073 A1 2008-11-27",CYP2D6
+Eperisone,O=C(C1=CC=C(C=C1)CC)C(C)CN2CCCCC2,"<9,H;Hydroxylation;R1>","Yoo, H. H.; et al, Xenobiotica (2009), 39(1), 1-10",CYP2D6
+9-Ethylaminoacridine,N=1C=2C=CC=CC2C(NCC)=C3C=CC=CC13,"<10,H;Oxidation;R1><9,10;Cleavage;R1>","Mayer, Richard T.; et al, Drug Metabolism and Disposition (2007), 35(1), 103-109",CYP2D6
+Dimemorfan,C=1C=C2C(=CC1C)C34CCN(C)C(C2)C4CCCC3,"<7,H;Hydroxylation;R1><12,H;Oxidation;R2><11,12;Cleavage;R2>","Chou, Yueh-Ching; et al, Journal of Pharmaceutical Sciences (2010), 99(2), 1063-1077",CYP2D6
+Propranolol,OC(COC1=CC=CC=2C=CC=CC12)CNC(C)C,"<8,H;Hydroxylation;R1><17,H;Oxidation;R2><16,17;Cleavage;R2>","Kong, L. M.; et al, Pharmazie (2012), 67(5), 440-447",CYP2D6
+Levallorphan,OC1=CC=C2C(=C1)C34CCN(CC=C)C(C2)C4CCCC3,"<17,H;Hydroxylation;R1><12,H;Oxidation;R2><11,12;Cleavage;R2>","Bonn, Britta; et al, Drug Metabolism and Disposition (2010), 38(1), 187-199",CYP2D6
+Levorphan,OC1=CC=C2C(=C1)C34CCN(C)C(C2)C4CCCC3,"<12,H;Oxidation;R1><11,12;Cleavage;R1>","Bonn, Britta; et al, Drug Metabolism and Disposition (2010), 38(1), 187-200",CYP2D6
+Procainamide,O=C(NCCN(CC)CC)C1=CC=C(N)C=C1,"<15,H;Hydroxylation;R1><9,H;Oxidation;R2><6,9;Cleavage;R2><7,H;Oxidation;R3><6,7;Cleavage;R3>",SOMP. Bioinformatics. 2015,CYP2D6
+Tiracizine,O=C(OCC)NC1=CC=C2C(=C1)N(C(=O)CN(C)C)C=3C=CC=CC3CC2,"<18,H;Oxidation;R1><17,18;Cleavage;R1><19,H;Oxidation;R2><17,19;Cleavage;R2>",SOMP. Bioinformatics. 2015,CYP2D6
+Buflomedil,O=C(C=1C(OC)=CC(OC)=CC1OC)CCCN2CCCC2,"<10,H;Oxidation;R1><9,10;Cleavage;R1>",SOMP. Bioinformatics. 2015,CYP2D6
+Carteolol,O=C1NC=2C=CC=C(OCC(O)CNC(C)(C)C)C2CC1,"<5,H;Hydroxylation;R1>",SOMP. Bioinformatics. 2015,CYP2D6
+Bupranolol,ClC1=CC=C(C=C1OCC(O)CNC(C)(C)C)C,"<18,H;Hydroxylation;R1>",SOMP. Bioinformatics. 2015,CYP2D6
+Nebivolol,FC1=CC=C2OC(CCC2=C1)C(O)CNCC(O)C3OC4=CC=C(F)C=C4CC3,"<3,H;Hydroxylation;R1><4,H;Hydroxylation;R2><22,H;Hydroxylation;R3><23,H;Hydroxylation;R4>",SOMP. Bioinformatics. 2015,CYP2D6
+Bepridil,O(CC(N1CCCC1)CN(C=2C=CC=CC2)CC=3C=CC=CC3)CC(C)C,"<21,H;Hydroxylation;R5>",SOMP. Bioinformatics. 2015,CYP2D6
+Irbesartan,O=C1N(C(=NC12CCCC2)CCCC)CC=3C=CC(=CC3)C=4C=CC=CC4C5=NN=NN5,"<11,H;Hydroxylation;R1><13,H;Hydroxylation;R2><8,H;Hydroxylation;R3><9,H;Hydroxylation;R4>",SOMP. Bioinformatics. 2015,CYP2D6
+Dofetilide,O=S(=O)(NC1=CC=C(OCCN(C)CCC2=CC=C(C=C2)NS(=O)(=O)C)C=C1)C,"<13,H;Oxidation;R1><12,13;Cleavage;R1>",SOMP. Bioinformatics. 2015,CYP3A4
+Ivabradine,O=C1N(CCC2=CC(OC)=C(OC)C=C2C1)CCCN(C)CC3C4=CC(OC)=C(OC)C=C4C3,"<21,H;Oxidation;R1><20,21;Cleavage;R1>",SOMP. Bioinformatics. 2015,CYP3A4
+Ranolazine,O=C(NC=1C(=CC=CC1C)C)CN2CCN(CC2)CC(O)COC=3C=CC=CC3OC,"<12,H;Oxidation;R1><12,13;Cleavage;R1><19,H;Oxidation;R2><16,19;Cleavage;R2><22,H;Oxidation;R3><22,23;Cleavage;R3><31,H;Oxidation;R4><30,31;Cleavage;R4><7,H;Hydroxylation;R5><26,H;Hydroxylation;R6><10,H;Hydroxylation;R7><11,H;Hydroxylation;R8>",SOMP. Bioinformatics. 2015,CYP3A4
+Prednisolone,O=C1C=CC2(C(=C1)CCC3C4CCC(O)(C(=O)CO)C4(C)CC(O)C32)C,"<8,H;Hydroxylation;R1>",SOMP. Bioinformatics. 2015,CYP3A4
+Bepridil,O(CC(N1CCCC1)CN(C=2C=CC=CC2)CC=3C=CC=CC3)CC(C)C,"<21,H;Hydroxylation;R1><17,H;Oxidation;R2><10,17;Cleavage;R2>",SOMP. Bioinformatics. 2015,CYP3A4
+Irbesartan,O=C1N(C(=NC12CCCC2)CCCC)CC=3C=CC(=CC3)C=4C=CC=CC4C5=NN=NN5,"<11,H;Hydroxylation;R1><13,H;Hydroxylation;R2><8,H;Hydroxylation;R3><9,H;Hydroxylation;R4>",SOMP. Bioinformatics. 2015,CYP3A4
+Tasosartan,O=C1N(C2=NC(=NC(=C2CC1)C)C)CC=3C=CC(=CC3)C=4C=CC=CC4C5=NN=NN5,"<10,H;Hydroxylation;R1>",SOMP. Bioinformatics. 2015,CYP3A4
+bezitramide,CCC(=O)n1c(=O)n(C2CCN(CCC(C#N)(c3ccccc3)c3ccccc3)CC2)c2ccccc12,"<13,H;Oxidation;R1><12,13;Cleavage;R1>","Jaladanki CK, Gahlawat A, Rathod G, Sandhu H, Jahan K, Bharatam PV. Mechanistic studies on the drug metabolism and toxicity originating from cytochromes P450. Drug Metab Rev. 2020 Aug;52(3):366-394.",CYP3A4
+bromfenac-indolinone,O=C(c1c2NC(=O)Cc2ccc1)c1ccc(Br)cc1,"<8,H;Hydroxylation;R1><11,H;Hydroxylation;R2><12,H;Hydroxylation;R3>","Yadav AS, Shah NR, Carlson TJ, Driscoll JP. Metabolite Profiling and Reaction Phenotyping for the in Vitro Assessment of the Bioactivation of Bromfenac †. Chem Res Toxicol. 2020 Jan 21;33(1):249-257. ",CYP3A4
+carfentanil,CCC(=O)N(c1ccccc1)C1(CCN(CCc2ccccc2)CC1)C(=O)OC,"<17,H;Hydroxylation;R1><16,H;Oxidation;R2><15,16;Cleavage;R2>","Kong L, Walz AJ. Identification of human cytochrome P450 isozymes involved in the oxidative metabolism of carfentanil. Toxicol Lett. 2021 Jun 1;343:28-33. doi: 10.1016/j.toxlet.2021.02.017. Epub 2021 Feb 27. Erratum in: Toxicol Lett. 2022 Aug 29;369:22-24. ",CYP3A4
+chelidonine,CN1Cc2c(ccc3c2OCO3)[C@@H]2[C@H]1c1cc3c(cc1C[C@@H]2O)OCO3,"<11,H;Oxidation;R1><10,11;Cleavage;R1><11,12;Cleavage;R1><25,H;Oxidation;R2><24,25;Cleavage;R2><25,26;Cleavage;R2>","Liu Y, Peng Y, Zhang Z, Guo X, Ji M, Zheng J. In vitro and in vivo studies of the metabolic activation of chelidonine. Chem Biol Interact. 2019 Aug 1;308:155-163.",CYP3A4
+columbin,CC12CCC3C(=O)OC(CC3(C1C1C=CC2(C(=O)O1)O)C)c1cocc1,"<23,H;Hydroxylation;R1><25,H;Hydroxylation;R2>","Pei J, Xiao W, Zhu D, Ji X, Shi L, Deng X. Cytochrome P450 Enzyme-Mediated Bioactivation as an Underlying Mechanism of Columbin-Induced Hepatotoxicity. Chem Res Toxicol. 2020 Apr 20;33(4):940-947.",CYP3A4
+dabrafenib,CC(C)(C)c1nc(c(s1)c1nc(N)ncc1)c1c(F)c(NS(=O)(=O)c2c(F)cccc2F)ccc1,"<1,H;Hydroxylation;R1><3,H;Hydroxylation;R2><4,H;Hydroxylation;R3>","Nair PC, McKinnon RA, Miners JO. Computational Prediction of the Site(s) of Metabolism and Binding Modes of Protein Kinase Inhibitors Metabolized by CYP3A4. Drug Metab Dispos. 2019 Jun;47(6):616-631.",CYP3A4
+dasatinib,Cc1nc(Nc2ncc(s2)C(=O)Nc2c(C)cccc2Cl)cc(n1)N1CCN(CCO)CC1,"<29,H;Oxidation;R1><28,29;Cleavage;R1><30,31;Oxidation;R2>",,CYP3A4
+dehydrochloromethyltestosterone,C[C@]12CC[C@H]3[C@H]([C@@H]1CC[C@]2(C)O)CCC1=C(C(=O)C=C[C@]31C)Cl,"<14,H;Hydroxylation;R1><9,H;Hydroxylation;R1>","Loke S, de la Torre X, Iannone M, La Piana G, Schlörer N, Botrè F, Bureik M, Parr MK. Controlled administration of dehydrochloromethyltestosterone in humans: Urinary excretion and long-term detection of metabolites for anti-doping purpose. J Steroid Biochem Mol Biol. 2021 Nov;214:105978.",CYP3A4
+dextrorphan,[C@H]12Cc3c(cc(O)cc3)[C@@]3(CCCC[C@H]13)CCN2C,"<19,H;Oxidation;R1><18,19;Cleavage;R1>","Oladepo, M. O., Adegbola, A. J., Soyinka, J. O., & Onyeji, C. O. (2021). Effect of Vernonia Amygdalina Leaf on Cytochrome P450 2D6- and 3A4-Mediated Metabolism of Dextromethorphan in Healthy Nigerian Subjects. Journal of Advances in Medical and Pharmaceutical Sciences, 23(2), 22-32.",CYP3A4
