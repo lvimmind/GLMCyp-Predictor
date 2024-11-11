@@ -53,7 +53,8 @@ def register_model(name):
 
     def register_model_cls(cls):
         if name in MODEL_REGISTRY:
-            raise ValueError("Cannot register duplicate model ({})".format(name))
+            # raise ValueError("Cannot register duplicate model ({})".format(name))
+            print("Warning: Cannot register duplicate model ({})".format(name))
         if not issubclass(cls, BaseUnicoreModel):
             raise ValueError("Model ({}: {}) must extend BaseUnicoreModel".format(name, cls.__name__))
         MODEL_REGISTRY[name] = cls
