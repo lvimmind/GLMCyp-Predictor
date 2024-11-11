@@ -92,7 +92,8 @@ def register_model_architecture(model_name, arch_name):
         if model_name not in MODEL_REGISTRY:
             raise ValueError("Cannot register model architecture for unknown model type ({})".format(model_name))
         if arch_name in ARCH_MODEL_REGISTRY:
-            raise ValueError("Cannot register duplicate model architecture ({})".format(arch_name))
+            # raise ValueError("Cannot register duplicate model architecture ({})".format(arch_name))
+            print("Warning: Cannot register duplicate model architecture ({})".format(arch_name))
         if not callable(fn):
             raise ValueError("Model architecture must be callable ({})".format(arch_name))
         ARCH_MODEL_REGISTRY[arch_name] = MODEL_REGISTRY[model_name]
