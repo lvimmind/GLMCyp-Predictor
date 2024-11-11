@@ -256,7 +256,7 @@ class Features_pretreatment():
         self.molecule_feature_pretreatment()
 
     @staticmethod
-    def molecule_features(csv_path, file_path = '../temp_data/all.npy', save_path = '../temp_data/'):
+    def molecule_features(csv_path, file_path = '../GLMCyp/temp_data/all.npy', save_path = '../GLMCyp/temp_data/'):
         # Process molecule features from a CSV file and save them to a pickle file
         df = pd.read_csv(csv_path)
         mol_dict = {}
