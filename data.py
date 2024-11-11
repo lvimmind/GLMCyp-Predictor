@@ -285,7 +285,7 @@ class Features_pretreatment():
     
     def molecule_feature_pretreatment(self):
         # Process molecule features based on the file type
-        if self.protein_feature == True:
+        if self.molecule_feature == True:
             if '.csv'in self.mols_file:
                 UNIMOL.main(file_path=self.mols_file)
                 self.molecule_features(self.mols_file)
