@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 from torch import optim
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import sys
-
+original_sys_path = sys.path.copy()
 src_path = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(src_path)
 
@@ -31,6 +31,8 @@ from UNIMOL.src.unimol.data import (
 )
 from UNIMOL.src.unimol.models.transformer_encoder_with_pair import TransformerEncoderWithPair
 from UNIMOL.src.unimol.models.unimol import NonLinearHead, GaussianLayer
+
+sys.path = original_sys_path
 
 def set_random_seed(random_seed=1024):
     random.seed(random_seed)
