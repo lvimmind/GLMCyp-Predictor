@@ -34,6 +34,8 @@ from UNIMOL.src.unimol.models.unimol import NonLinearHead, GaussianLayer
 
 sys.path = original_sys_path
 
+print("Current working directory:", os.getcwd())
+
 def set_random_seed(random_seed=1024):
     random.seed(random_seed)
     os.environ['PYTHONHASHSEED'] = str(random_seed)
@@ -114,7 +116,7 @@ class UniMolModel(nn.Module):
 def calculate_3D_structure(file_path):
     def get_smiles_list_():
         data_df = pd.read_csv(file_path)
-        smiles_list = data_df["smiles"].tolist()
+        smiles_list = data_df["SMILES"].tolist()
         smiles_list = list(set(smiles_list))  # 去除重复的smiles,为了不重复计算相同的分子，但最后的数据不会变
         print(len(smiles_list))
         return smiles_list
@@ -192,14 +194,14 @@ def construct_data_list(file_path):
     smiles_to_conformation_dict = pkl.load(open('../UNIMOL/data/intermediate/smiles_to_conformation_dict.pkl', 'rb'))
     data_list = []
     for index, row in data_df.iterrows():
-        smiles = row["smiles"]
+        smiles = row["SMILES"]
         if smiles in smiles_to_conformation_dict:
             data_item = {
                 "atoms": smiles_to_conformation_dict[smiles]["atoms"],
                 "coordinates": smiles_to_conformation_dict[smiles]["coordinates"],
                 "smiles": smiles,
                 # "label": row["label"],
-                "dataset_type": row["dataset_type"],
+                "dataset_type": "train",
             }
             data_list.append(data_item)
     print("len(data_list):", len(data_list))
@@ -240,17 +242,9 @@ def convert_data_list_to_data_loader(remove_hydrogen):
     batch_size = 32
     data_list = pkl.load(open('../UNIMOL/data/intermediate/data_list.pkl', 'rb'))
     data_list_train = [data_item for data_item in data_list if data_item["dataset_type"] == "train"]
-    # data_list_validate = [data_item for data_item in data_list if data_item["dataset_type"] == "validate"]
-    # data_list_test = [data_item for data_item in data_list if data_item["dataset_type"] == "test"]
     dataset_train = convert_data_list_to_dataset_(data_list_train)
-    # dataset_validate = convert_data_list_to_dataset_(data_list_validate)
-    # dataset_test = convert_data_list_to_dataset_(data_list_test)
     data_loader_train = DataLoader(dataset_train, batch_size=batch_size, shuffle=False, collate_fn=dataset_train.collater)
-    # data_loader_valid = DataLoader(dataset_validate, batch_size=batch_size, shuffle=True, collate_fn=dataset_validate.collater)
-    # data_loader_test = DataLoader(dataset_test, batch_size=batch_size, shuffle=True, collate_fn=dataset_test.collater)
-    # return data_loader_train, data_loader_valid, data_loader_test
-    # return data_loader_train, data_loader_test
-    # return data_loader_test
+
     return data_loader_train
 
 class UniMolRegressor(nn.Module):
