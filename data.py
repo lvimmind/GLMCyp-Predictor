@@ -265,11 +265,11 @@ class Features_pretreatment():
         mol_list = []
         i = 0
         for index, row in df.iterrows():
-            mol = Chem.MolFromSmiles(row['smiles'])
+            mol = Chem.MolFromSmiles(row['SMILES'])
             mol = Chem.AddHs(mol)
             mol_list.append(mol.GetNumAtoms())
             p = mol.GetNumAtoms()
-            name = row['id']
+            name = row['Name']
             mol_data = data[i, 1:p+1, :]
             mol_dict[name] = mol_data
             i += 1
