@@ -252,9 +252,9 @@ class UniMolRegressor(nn.Module):
         super().__init__()
         self.encoder = UniMolModel()
         if remove_hydrogen:
-            self.encoder.load_state_dict(torch.load('../UNIMOL/weight/mol_pre_no_h_220816.pt')['model'], strict=False)
+            self.encoder.load_state_dict(torch.load('../GLMCyp/UNIMOL/weight/mol_pre_no_h_220816.pt')['model'], strict=False)
         else:
-            self.encoder.load_state_dict(torch.load('../UNIMOL/weight/mol_pre_all_h_220816.pt')['model'], strict=False)
+            self.encoder.load_state_dict(torch.load('../GLMCyp/UNIMOL/weight/mol_pre_all_h_220816.pt')['model'], strict=False)
         self.mlp = nn.Sequential(
             nn.Linear(512, 128),
             nn.ReLU(),
