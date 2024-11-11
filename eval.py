@@ -125,8 +125,8 @@ def model_load():
 
 if __name__ == '__main__':
 
-    input_csv_path = '../raw_data/BoME7.csv'
-    output_csv_path = '../Results/BoME7.csv'
+    input_csv_path = '../GLMCyp/raw_data/BoME7.csv'
+    output_csv_path = '../GLMCyp/Results/BoME7.csv'
     Features_pretreatment(input_csv_path)
     model = model_load()
     test_loader, Data_all = Data_initiation_file(input_csv_path)

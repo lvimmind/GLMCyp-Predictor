@@ -34,7 +34,7 @@ from UNIMOL.src.unimol.models.unimol import NonLinearHead, GaussianLayer
 
 sys.path = original_sys_path
 
-print("Current working directory:", os.getcwd())
+# print("Current working directory:", os.getcwd())
 
 def set_random_seed(random_seed=1024):
     random.seed(random_seed)
@@ -50,7 +50,7 @@ def set_random_seed(random_seed=1024):
 class UniMolModel(nn.Module):
     def __init__(self):
         super().__init__()
-        dictionary = Dictionary.load('../UNIMOL/data/raw/token_list.txt')
+        dictionary = Dictionary.load('../GLMCyp/UNIMOL/data/raw/token_list.txt')
         dictionary.add_symbol("[MASK]", is_special=True)
         self.padding_idx = dictionary.pad()
         self.embed_tokens = nn.Embedding(
@@ -145,7 +145,7 @@ def calculate_3D_structure(file_path):
             if result != 0:
                 print('EmbedMolecule failed', result, smiles)
                 mutex.acquire()
-                with open('../UNIMOL/data/result/invalid_smiles.txt', 'a') as f:
+                with open('../GLMCyp/UNIMOL/data/result/invalid_smiles.txt', 'a') as f:
                     f.write('EmbedMolecule failed' + ' ' + str(result) + ' ' + str(smiles) + '\n')
                 mutex.release()
                 continue
@@ -154,7 +154,7 @@ def calculate_3D_structure(file_path):
             except:
                 print('MMFFOptimizeMolecule error', smiles)
                 mutex.acquire()
-                with open('../UNIMOL/data/result/invalid_smiles.txt', 'a') as f:
+                with open('../GLMCyp/UNIMOL/data/result/invalid_smiles.txt', 'a') as f:
                     f.write('MMFFOptimizeMolecule error' + ' ' + str(smiles) + '\n')
                 mutex.release()
                 continue
@@ -184,14 +184,14 @@ def calculate_3D_structure(file_path):
         t.start()
     for t in threads:
         t.join()
-    pkl.dump(smiles_to_conformation_dict, open('../UNIMOL/data/intermediate/smiles_to_conformation_dict.pkl', 'wb'))
+    pkl.dump(smiles_to_conformation_dict, open('../GLMCyp/UNIMOL/data/intermediate/smiles_to_conformation_dict.pkl', 'wb'))
     print('Valid smiles count:', len(smiles_to_conformation_dict))
 
 def construct_data_list(file_path):
     data_df = pd.read_csv(file_path)
     if 'dataset_type' not in data_df.columns:
         data_df['dataset_type'] = 'train'
-    smiles_to_conformation_dict = pkl.load(open('../UNIMOL/data/intermediate/smiles_to_conformation_dict.pkl', 'rb'))
+    smiles_to_conformation_dict = pkl.load(open('../GLMCyp/UNIMOL/data/intermediate/smiles_to_conformation_dict.pkl', 'rb'))
     data_list = []
     for index, row in data_df.iterrows():
         smiles = row["SMILES"]
@@ -205,11 +205,11 @@ def construct_data_list(file_path):
             }
             data_list.append(data_item)
     print("len(data_list):", len(data_list))
-    pkl.dump(data_list, open('../UNIMOL/data/intermediate/data_list.pkl', 'wb'))
+    pkl.dump(data_list, open('../GLMCyp/UNIMOL/data/intermediate/data_list.pkl', 'wb'))
 
 def convert_data_list_to_data_loader(remove_hydrogen):
     def convert_data_list_to_dataset_(data_list):
-        dictionary = Dictionary.load('../UNIMOL/data/raw/token_list.txt')
+        dictionary = Dictionary.load('../GLMCyp/UNIMOL/data/raw/token_list.txt')
         dictionary.add_symbol("[MASK]", is_special=True)
         smiles_dataset = KeyDataset(data_list, "smiles")
         # label_dataset = KeyDataset(data_list, "label")
@@ -240,7 +240,7 @@ def convert_data_list_to_data_loader(remove_hydrogen):
         })
 
     batch_size = 32
-    data_list = pkl.load(open('../UNIMOL/data/intermediate/data_list.pkl', 'rb'))
+    data_list = pkl.load(open('../GLMCyp/UNIMOL/data/intermediate/data_list.pkl', 'rb'))
     data_list_train = [data_item for data_item in data_list if data_item["dataset_type"] == "train"]
     dataset_train = convert_data_list_to_dataset_(data_list_train)
     data_loader_train = DataLoader(dataset_train, batch_size=batch_size, shuffle=False, collate_fn=dataset_train.collater)
