@@ -8,12 +8,15 @@ from tqdm import tqdm
 from threading import Thread, Lock
 from rdkit import Chem
 from rdkit.Chem import AllChem
-from deepchem import molnet
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from torch import optim
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+import sys
+
+src_path = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(src_path)
 
 from UNIMOL.src.unicore.modules import init_bert_params
 from UNIMOL.src.unicore.data import (
@@ -104,28 +107,7 @@ class UniMolModel(nn.Module):
         }
         return output
 
-def get_dataset_from_deepchem():
-    tasks, datasets, transformers = molnet.load_lipo(splitter='scaffold')
-    train_dataset, validate_dataset, test_dataset = datasets
-    dataset = {
-        "train": train_dataset,
-        "validate": validate_dataset,
-        "test": test_dataset,
-    }
-    smiles_list = []
-    label_list = []
-    dataset_type_list = []
-    for dataset_type, dataset in dataset.items():
-        smiles_list.extend(dataset.ids.tolist())
-        label_list.extend(dataset.y.squeeze().tolist())
-        dataset_type_list.extend([dataset_type] * len(dataset.ids))
-    data_df = pd.DataFrame({
-            "smiles": smiles_list,
-            "label": label_list,
-            "dataset_type": dataset_type_list,
-        }
-    )
-    data_df.to_csv("../data/raw/data_df.csv", index=False)
+
 
 def calculate_3D_structure(file_path):
     def get_smiles_list_():
@@ -301,93 +283,9 @@ class UniMolRegressor(nn.Module):
 
         return molecule_embedding
 
-def evaluate(model, data_loader):
-    model.eval()
-    label_predict = torch.tensor([], dtype=torch.float32).cuda()
-    label_true = torch.tensor([], dtype=torch.float32).cuda()
-    with torch.no_grad():
-        # for batch in data_loader:
-        for batch in tqdm(data_loader):
-            label_predict_batch = model(batch)
-            label_true_batch = batch['target']['label']
 
-            label_predict = torch.cat((label_predict, label_predict_batch.detach()), dim=0)
-            label_true = torch.cat((label_true, label_true_batch.detach()), dim=0)
-    
-    label_predict = label_predict.cpu().numpy()
-    label_true = label_true.cpu().numpy()
-    rmse = round(np.sqrt(mean_squared_error(label_true, label_predict)), 3)
-    mae = round(mean_absolute_error(label_true, label_predict), 3)
-    r2 = round(r2_score(label_true, label_predict), 3)
-    metric = {'rmse': rmse, 'mae': mae, 'r2': r2}
-    return metric
-
-def train(model_version, remove_hydrogen=True):
-    data_loader_train, data_loader_validate, data_loader_test = convert_data_list_to_data_loader(remove_hydrogen)
-
-    model = UniMolRegressor(remove_hydrogen)
-    model.cuda()
-    criterion = nn.MSELoss()
-    optimizer = optim.Adam(model.parameters(), lr=5e-5, weight_decay=1e-5)
-    scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, 15)
-
-    current_best_metric = 1e10
-    max_bearable_epoch = 50
-    current_best_epoch = 0
-    for epoch in range(300):
-        model.train()
-        # for batch in data_loader_train:
-        for batch in tqdm(data_loader_train):
-            label_predict_batch = model(batch)
-            label_true_batch = batch['target']['label'].unsqueeze(1).to(torch.float32)
-            # print(label_predict_batch.shape, label_true_batch.shape)
-            # print(label_predict_batch)
-            # print(label_true_batch)
-            # pdb.set_trace()
-            
-            loss = criterion(label_predict_batch, label_true_batch)
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-        scheduler.step()
-        
-        metric_train = evaluate(model, data_loader_train)
-        metric_validate = evaluate(model, data_loader_validate)
-        metric_test = evaluate(model, data_loader_test)
-
-        if metric_validate['rmse'] < current_best_metric:
-            current_best_metric = metric_validate['rmse']
-            current_best_epoch = epoch
-            torch.save(model.state_dict(), "../weight/" + model_version + ".pt")
-
-        print("==================================================================================")
-        print('Epoch', epoch)
-        print('Train', metric_train)
-        print('validate', metric_validate)
-        print('Test', metric_test)
-        print('current_best_epoch', current_best_epoch, 'current_best_metric', current_best_metric)
-        print("==================================================================================")
-        if epoch > current_best_epoch + max_bearable_epoch:
-            break
-
-def test(model_version, remove_hydrogen=True):
-    data_loader_train, data_loader_validate, data_loader_test = convert_data_list_to_data_loader(remove_hydrogen)
-
-    model = UniMolRegressor(remove_hydrogen)
-    model.load_state_dict(torch.load("../weight/" + model_version + ".pt"))
-    model.cuda()
-
-    metric_train = evaluate(model, data_loader_train)
-    metric_validate = evaluate(model, data_loader_validate)
-    metric_test = evaluate(model, data_loader_test)
-    print("Train", metric_train)
-    print("validate", metric_validate)
-    print("Test", metric_test)
 
 def generate_fp(model_version, remove_hydrogen=True):
-    # data_loader_train, data_loader_validate, data_loader_test = convert_data_list_to_data_loader(remove_hydrogen)
-    # data_loader_train, data_loader_test = convert_data_list_to_data_loader(remove_hydrogen)
-    # data_loader_test = convert_data_list_to_data_loader(remove_hydrogen)
     data_loader_train = convert_data_list_to_data_loader(remove_hydrogen)
 
     model = UniMolRegressor(remove_hydrogen)
@@ -424,20 +322,14 @@ def generate_fp(model_version, remove_hydrogen=True):
 
 def main(file_path):
     set_random_seed(1024)
-    # get_dataset_from_deepchem()  # 从数据库下载数据集,自己的数据不需要这一步
     calculate_3D_structure(file_path)  # 计算3D结构
     construct_data_list(file_path)  # 构造数据集
-    # train(model_version='0', remove_hydrogen=True)
-    # test(model_version='0', remove_hydrogen=True)
     generate_fp(model_version='0', remove_hydrogen=False)  # 生成特征向量
     print('All is well!')
 
 if __name__ == "__main__":
     set_random_seed(1024)
-    # get_dataset_from_deepchem()  # 从数据库下载数据集,自己的数据不需要这一步
     calculate_3D_structure()  # 计算3D结构
     construct_data_list()  # 构造数据集
-    # train(model_version='0', remove_hydrogen=True)
-    # test(model_version='0', remove_hydrogen=True)
     generate_fp(model_version='0', remove_hydrogen=False)  # 生成特征向量
     print('All is well!')
