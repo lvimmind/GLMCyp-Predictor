@@ -2,7 +2,6 @@
 
 
 
-![model](https://github.com/CjmTH/DeepP450/assets/156410487/5064bb10-a6e8-46cf-9a00-cadb580ce710)
 
 
 
