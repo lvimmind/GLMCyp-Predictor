@@ -40,13 +40,6 @@ class MoleculeData:
         # Read molecule data from a CSV file and return a list of MoleculeData objects
         molecule = []
         df = pd.read_csv(file_path)
-<<<<<<< Updated upstream
-=======
-        if 'Training_smiles' or 'Validation_smiles' in file_path:
-            Test = False
-        else:
-            Test = True
->>>>>>> Stashed changes
         for index, row in df.iterrows():
             name = row['Name']
             smiles = row['SMILES']
