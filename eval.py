@@ -20,7 +20,6 @@ n_hid = 128
 dropout = 0.1
 alpha = 0.2
 n_heads = 4
-threshold = 0.8
 
 learning_rate = 0.0001
 random.seed(random_seed)
@@ -71,7 +70,7 @@ def eval(model, test_loader):
 
         all_outputs_test = torch.cat(all_outputs_test, dim=0)
         all_labels_test = torch.cat(all_labels_test, dim=0)
-        Pred_BoM = torch.cat([1 if x >= threshold else 0 for x in all_outputs_test], dim=0)
+
         # roc_auc = roc_auc_score(all_labels_test.cpu().numpy(), all_outputs_test.cpu().numpy())
 
         # fpr, tpr, thresholds = roc_curve(all_labels_test.cpu().numpy(), all_outputs_test.cpu().numpy())
@@ -101,7 +100,7 @@ def eval(model, test_loader):
         # print(f'Optimal threshold: {optimal_threshold}')
         # print('****************************************')
 
-    return all_labels_test.cpu().numpy(), all_outputs_test.cpu().numpy(), Pred_BoM.cpu().numpy()
+    return all_labels_test.cpu().numpy(), all_outputs_test.cpu().numpy()
 
 
 
@@ -131,9 +130,9 @@ if __name__ == '__main__':
     Features_pretreatment(input_csv_path)
     model = model_load()
     test_loader, Data_all = Data_initiation_file(input_csv_path)
-    labels, pred, Pred_BoM = eval(model, test_loader)
+    labels, pred = eval(model, test_loader)
 
-    df = pd.DataFrame({'Bond':Data_all.bond_names, 'Labels': labels.reshape(-1), 'Pred': pred.reshape(-1), 'Pred_BoM': Pred_BoM.reshape(-1)})
+    df = pd.DataFrame({'Bond':Data_all.bond_names, 'Labels': labels.reshape(-1), 'Pred': pred.reshape(-1)})
     df.to_csv(output_csv_path, index=False)
 
 
