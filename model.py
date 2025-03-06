@@ -125,7 +125,7 @@ class self_attention(nn.Module):
         return y
 
 class GLMCyp(nn.Module):
-    def __init__(self, in_feature, hidden_feature, dropout, alpha, n_heads, bondnum=36):
+    def __init__(self, in_feature, hidden_feature, dropout, alpha, n_heads, bondnum=32):
         super(GLMCyp, self).__init__()
         self.in_feature = in_feature
         self.hidden_feature = hidden_feature
