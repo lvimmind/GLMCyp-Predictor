@@ -29,6 +29,6 @@ def SdfToCsv(file_path, enzyme_list, output_path):
 
 
 enzyme_list=['CYP1A2', 'CYP2A6', 'CYP2B6', 'CYP2C8', 'CYP2C9', 'CYP2C19', 'CYP2D6', 'CYP2E1', 'CYP3A4']
-SdfToCsv('..\raw_data\CypBoM_dataset\Testing_smiles.sdf', enzyme_list, '..\raw_data\CypBoM_dataset\Testing_smiles.csv')
+SdfToCsv('/home/huangxh22/GLMCyp-Predictor/raw_data/CypBoM_dataset/Validation_smiles.sdf', enzyme_list, '/home/huangxh22/GLMCyp-Predictor/raw_data/CypBoM_dataset/Validation_smiles.csv')
 
 

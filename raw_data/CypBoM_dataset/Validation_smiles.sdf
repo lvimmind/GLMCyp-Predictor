@@ -999,6 +999,8 @@ VHGCDTVCOLNTBX-KRWDZBQOSA-N
 <9,H;Hydroxylation;R1>
 <0,H;Oxidation;R2>
 <0,1;Cleavage;R2>
+
+
 > <References>
 Ring BJ, Gillespie JS, Eckstein JA, Wrighton SA: Identification of the human cytochromes P450 responsible for atomoxetine metabolism. Drug Metab Dispos. 2002 Mar;30(3):319-23. doi: 10.1124/dmd.30.3.319. (PMID: 11854152)
 Sauer JM, Ponsler GD, Mattiuz EL, Long AJ, Witcher JW, Thomasson HR, Desante KA: Disposition and metabolic fate of atomoxetine hydrochloride: the role of CYP2D6 in human disposition and metabolism. Drug Metab Dispos. 2003 Jan;31(1):98-107. doi: 10.1124/dmd.31.1.98. (PMID: 12485958)

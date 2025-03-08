@@ -159,7 +159,7 @@ class DataCollector(Dataset):
                 bond_names.append(molecule.name + '_' + molecule.enzyme + '_' + str(name))
                 features_list.append(molecule.features[idx][1])
                 adj_matrix_list.append(molecule.features[idx][0])
-        with open('../temp_data/protein_features.pkl', 'rb') as file:
+        with open('/home/huangxh22/GLMCyp-Predictor/temp_data/protein_features.pkl', 'rb') as file:
             Protein_Data = pickle.load(file)
         self.bond_names = bond_names 
         self.features = features_list
@@ -256,7 +256,7 @@ class Features_pretreatment():
         self.molecule_feature_pretreatment()
 
     @staticmethod
-    def molecule_features(csv_path, file_path = '../GLMCyp/temp_data/all.npy', save_path = '../GLMCyp/temp_data/'):
+    def molecule_features(csv_path, file_path = '/home/huangxh22/GLMCyp-Predictor/temp_data/all.npy', save_path = '/home/huangxh22/GLMCyp-Predictor/temp_data/'):
         # Process molecule features from a CSV file and save them to a pickle file
         df = pd.read_csv(csv_path)
         mol_dict = {}

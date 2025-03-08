@@ -309,7 +309,7 @@ def generate_fp(model_version, remove_hydrogen=True):
         for seq in sequence_representations
     ])
 
-    feature_name = "../GLMCyp/temp_data/all.npy"
+    feature_name = "/home/huangxh22/GLMCyp-Predictor/temp_data/all.npy"
     np.save(feature_name, padded_representations)
 
     fps = np.load(feature_name)

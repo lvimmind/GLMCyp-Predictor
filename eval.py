@@ -56,6 +56,7 @@ def eval(model, test_loader):
     with torch.no_grad():
         all_outputs_test = []
         all_labels_test = []
+        Pred_BoM = []
         for batch_data in test_loader:
 
             adj_matrix_test, features_test, labels_test, enzyme_test= batch_data
@@ -66,12 +67,14 @@ def eval(model, test_loader):
             enzyme_test = enzyme_test.to(device)
                 
             predictions = model( adj_matrix_test, features_test,enzyme_test)
+            Pred_BoM.append(torch.tensor([1 if x >= threshold else 0 for x in predictions.detach().cpu()]))
             all_outputs_test.append(predictions.detach().cpu())
             all_labels_test.append(labels_test.detach().cpu())
 
+
         all_outputs_test = torch.cat(all_outputs_test, dim=0)
         all_labels_test = torch.cat(all_labels_test, dim=0)
-        Pred_BoM = torch.cat([1 if x >= threshold else 0 for x in all_outputs_test], dim=0)
+        Pred_BoM = torch.cat(Pred_BoM, dim=0)
         # roc_auc = roc_auc_score(all_labels_test.cpu().numpy(), all_outputs_test.cpu().numpy())
 
         # fpr, tpr, thresholds = roc_curve(all_labels_test.cpu().numpy(), all_outputs_test.cpu().numpy())
@@ -116,7 +119,7 @@ def eval_each_enzyme(model, loader_list):
 
 def model_load():
     loaded_model = GLMCyp(n_feat, n_hid, dropout, alpha, n_heads).to(device)
-    loaded_model=torch.load('../saved_model/Predict_model_1.pt')
+    loaded_model.load_state_dict(torch.load('/home/huangxh22/GLMCyp/saved_model/Predict_model_1.pt'))
     return loaded_model
 
 
@@ -126,8 +129,8 @@ def model_load():
 
 if __name__ == '__main__':
 
-    input_csv_path = '../GLMCyp/raw_data/BoME7.csv'
-    output_csv_path = '../GLMCyp/Results/BoME7.csv'
+    input_csv_path = '/home/huangxh22/GLMCyp-Predictor/raw_data/CypBoM_dataset/Testing_smiles.csv'
+    output_csv_path = '/home/huangxh22/GLMCyp-Predictor/Results/BoME7.csv'
     Features_pretreatment(input_csv_path)
     model = model_load()
     test_loader, Data_all = Data_initiation_file(input_csv_path)

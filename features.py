@@ -206,7 +206,7 @@ class Molecule_feature():
         
         self.bond_adjacent_matrix = np.array(adjacent_matrix)
 
-    def generate_all_features(self, Name, file_path='../temp_data/mol_dict.pkl'):
+    def generate_all_features(self, Name, file_path='/home/huangxh22/GLMCyp-Predictor/temp_data/mol_dict.pkl'):
         # Generate all features for the molecule
         with open(file_path, 'rb') as f:
             molecule_dict = pickle.load(f)

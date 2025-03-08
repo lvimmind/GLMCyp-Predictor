@@ -1,12 +1,13 @@
 from sklearn.metrics import roc_auc_score, accuracy_score, confusion_matrix, jaccard_score
 from model import GLMCyp
-from data import DataCollector, MoleculeData
+from data import DataCollector, MoleculeData, Features_pretreatment
 from torch.utils.data import DataLoader
 import torch
 import torch.nn as nn
 from torch.optim import Adam
 import random
 import numpy as np
+import pandas as pd
 import pickle
 import os
 
@@ -27,12 +28,30 @@ np.random.seed(random_seed)
 
 
 
+def Combine_csv(train_file_path, val_file_path, save_path):
 
+    df1 = pd.read_csv(train_file_path)
+    df2 = pd.read_csv(val_file_path)
+    combined_df = pd.concat([df1, df2])
+    combined_df.to_csv(save_path, index=False)
 
 def Data_initiation(train_file_path, val_file_path):
 
-    Molecules = MoleculeData.Get_target_sdf(train_file_path)
-    Molecules_val = MoleculeData.Get_target_sdf(val_file_path)
+    if '.csv' in train_file_path:
+        Molecules = MoleculeData.Get_target_csv(train_file_path)
+    elif '.sdf' in train_file_path:
+        Molecules = MoleculeData.Get_target_sdf(train_file_path)
+    else:
+        print('File format not supported')
+
+    
+    if '.csv' in val_file_path:
+        Molecules_val = MoleculeData.Get_target_csv(val_file_path)
+    elif '.sdf' in val_file_path:
+        Molecules_val = MoleculeData.Get_target_sdf(val_file_path)
+    else:
+        print('File format not supported')
+
 
     for mol in Molecules:
         mol.find_target()
@@ -124,8 +143,8 @@ def train(model, data_loader, test_loader, max_epoch, optimizer, criterion, save
 
             roc_auc = roc_auc_score(all_labels_test.cpu().numpy(), all_outputs_test.cpu().numpy())
 
-            accuracy = accuracy_score(all_labels_test, [1 if p > 0.75 else 0 for p in all_outputs_test])
-            jac = jaccard_score(all_labels_test, [1 if p > 0.75 else 0 for p in all_outputs_test])
+            accuracy = accuracy_score(all_labels_test, [1 if p > 0.8 else 0 for p in all_outputs_test])
+            jac = jaccard_score(all_labels_test, [1 if p > 0.8 else 0 for p in all_outputs_test])
 
 
             print("Validation Set Metrics:")
@@ -137,7 +156,7 @@ def train(model, data_loader, test_loader, max_epoch, optimizer, criterion, save
 
             if roc_auc > max_roc:
                 max_roc = roc_auc
-                torch.save(model.state_dict(), save_dir + 'D36_{}.pt'.format(epoch))
+                torch.save(model.state_dict(), save_dir + 'Saved_Model_{}.pt'.format(epoch))
                 best_epoch = epoch
 
 
@@ -149,9 +168,12 @@ def train(model, data_loader, test_loader, max_epoch, optimizer, criterion, save
 
 
 if __name__ == '__main__':
-    train_path = '/home/huangxh22/UNIMOL/Training_smiles.sdf'
-    val_path = '/home/huangxh22/UNIMOL/Validation_smiles.sdf'
-    save_dir = '/data/huangxh22/'
+    train_path = '/home/huangxh22/GLMCyp-Predictor/raw_data/CypBoM_dataset/Training_smiles.csv'
+    val_path = '/home/huangxh22/GLMCyp-Predictor/raw_data/CypBoM_dataset/Validation_smiles.csv'
+    combined_path = '/home/huangxh22/GLMCyp-Predictor/temp_data/Combined.csv'
+    save_dir = '/home/huangxh22/GLMCyp-Predictor/saved_model/'
+    Combine_csv(train_path, val_path, combined_path)
+    Features_pretreatment(combined_path)
     print('start*************')
     model = GLMCyp(n_feat, n_hid, dropout, alpha, n_heads).to(device)
     criterion = nn.BCELoss().to(device)
